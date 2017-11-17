@@ -1,0 +1,15 @@
+ToDo List
+
+- Setup GitHub
+- Psuedocode each function
+	- Mem_Init
+		- getPageSize()?
+	- Mem_Dump
+	- Mem_Alloc
+		- helper function looks through free mem and finds a spot for the new allocation
+	- Mem_Free
+- Implement & Test the Above
+- Comments!
+- Memory Leaks?
+- "(When in doubt, go to the) ** Library ** " - Herminone Granger
+- Get some fucking delicious Bahn Mi
