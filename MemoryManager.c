@@ -16,11 +16,8 @@
 
 //Mem_Init 
 void *Mem_Init (int sizeOfRegion){
-	printf("page size: %d\n", getpagesize());
 	int numPages = ceil((double) sizeOfRegion / (double) getpagesize());
-	printf("numPages: %d\n", numPages);
 	int requestSize = numPages * getpagesize();
-	printf("requestSize: %d\n", requestSize);
 
 	// open the /dev/zero device
 	int fd = open("/dev/zero", O_RDWR);
@@ -28,9 +25,9 @@ void *Mem_Init (int sizeOfRegion){
 	// requestSize (in bytes) needs to be evenly divisible by the page size
 	void *ptr = mmap(NULL, requestSize, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
 	if (ptr == MAP_FAILED) {
-		perror("mmap"); exit(1);
+		perror("mmap");
+		exit(1);
 	}
-	// close the device (don't worry, mapping should be unaffected)
 	close(fd);
 
 	return ptr;
