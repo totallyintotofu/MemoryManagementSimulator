@@ -5,6 +5,7 @@ ToDo List
 	- Mem_Init
 		- getPageSize()?
 	- Mem_Dump
+		- Print formatted free chunk
 	- Mem_Alloc
 		- helper function looks through free mem and finds a spot for the new allocation
 	- Mem_Free
